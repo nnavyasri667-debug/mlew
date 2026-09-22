@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malineni Women's College</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    color:#222;
+    background:#faf8ff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.logo-box{
+    width:45px;
+    height:45px;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:22px;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+
+.logo span{
+    display:block;
+    color:#7c3aed;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#7c3aed;
+}
+
+.apply-btn{
+    padding:11px 18px;
+    border-radius:10px;
+    color:white;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    padding:90px 0;
+    background:
+    radial-gradient(circle at 90% 10%,#fbcfe8,transparent 25%),
+    radial-gradient(circle at 10% 20%,#ddd6fe,transparent 30%),
+    white;
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    background:#f0eaff;
+    color:#6d28d9;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#7c3aed,#ec4899);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#666;
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:28px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:13px 20px;
+    border-radius:12px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+
+.primary{
+    color:white;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+
+.secondary{
+    background:white;
+    border:1px solid #ddd;
+    color:#6d28d9;
+}
+
+.hero-card{
+    min-height:450px;
+    padding:35px;
+    border-radius:30px;
+    display:flex;
+    align-items:end;
+    color:white;
+    background:linear-gradient(145deg,#5b21b6,#ec4899);
+    box-shadow:0 25px 60px rgba(91,33,182,.3);
+}
+
+.hero-card h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.hero-card p{
+    color:#eee;
+    font-size:16px;
+}
+
+.pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+}
+
+.pills span{
+    background:rgba(255,255,255,.15);
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.section-title small{
+    color:#7c3aed;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #eee;
+    box-shadow:0 10px 30px rgba(70,30,120,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    border-radius:15px;
+    background:#f0eaff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#777;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:430px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    display:flex;
+    align-items:end;
+    padding:30px;
+    color:white;
+}
+
+.about-box{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+}
+
+.about-box h3{
+    font-size:28px;
+}
+
+.about-text h2{
+    font-size:38px;
+    margin:10px 0 20px;
+}
+
+.about-text p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.check{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.check li{
+    margin:12px 0;
+    font-weight:600;
+}
+
+.check li::before{
+    content:"✓";
+    display:inline-flex;
+    width:24px;
+    height:24px;
+    justify-content:center;
+    align-items:center;
+    background:#7c3aed;
+    color:white;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+/* PROGRAMS */
+
+#programs{
+    background:white;
+}
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.filter{
+    padding:9px 16px;
+    border:1px solid #ddd;
+    border-radius:25px;
+    background:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.filter.active{
+    background:#7c3aed;
+    color:white;
+}
+
+.programs{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.program{
+    padding:25px;
+    border:1px solid #eee;
+    border-radius:20px;
+    background:white;
+}
+
+.program-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.program h3{
+    margin-bottom:10px;
+}
+
+.program p{
+    color:#777;
+}
+
+/* FACILITIES */
+
+.facilities{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* STATS */
+
+.stats{
+    background:linear-gradient(135deg,#29104f,#8b1d65);
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.stat h2{
+    font-size:45px;
+}
+
+.stat p{
+    color:#ddd;
+}
+
+/* ADMISSION */
+
+.admission{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.admission-card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+}
+
+.steps{
+    margin-top:20px;
+}
+
+.step{
+    display:flex;
+    gap:15px;
+    margin:18px 0;
+}
+
+.step-number{
+    width:35px;
+    height:35px;
+    min-width:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:10px;
+    background:#7c3aed;
+    font-weight:bold;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    background:white;
+    margin-bottom:12px;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+.question{
+    width:100%;
+    padding:20px;
+    border:none;
+    background:white;
+    text-align:left;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+}
+
+.answer{
+    display:none;
+    padding:0 20px 20px;
+    color:#777;
+}
+
+.faq-item.active .answer{
+    display:block;
+}
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:25px;
+}
+
+.contact-info{
+    padding:35px;
+    color:white;
+    border-radius:25px;
+    background:linear-gradient(145deg,#29104f,#8b1d65);
+}
+
+.contact-info p{
+    color:#ddd;
+    margin:15px 0;
+}
+
+.contact-details{
+    list-style:none;
+}
+
+.contact-details li{
+    margin:20px 0;
+}
+
+.form{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    border:1px solid #eee;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+input,select,textarea{
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+textarea{
+    min-height:120px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#160b2b;
+    color:white;
+    padding:45px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3,
+footer h4{
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#aaa;
+    font-size:14px;
+    display:block;
+    margin-bottom:8px;
+}
+
+.copyright{
+    border-top:1px solid #352344;
+    margin-top:30px;
+    padding-top:20px;
+    color:#888;
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* MOBILE */
+
+.menu{
+    display:none;
+    font-size:25px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        left:5%;
+        right:5%;
+        background:white;
+        padding:20px;
+        border-radius:15px;
+        display:none;
+        flex-direction:column;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .apply-btn{
+        display:none;
+    }
+
+    .hero-content,
+    .about,
+    .admission,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .programs{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .facilities{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .cards,
+    .programs,
+    .facilities,
+    .stats-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .copyright{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+<div class="container navbar">
+
+    <a href="#home" class="logo">
+        <div class="logo-box">M</div>
+        <div>
+            Malineni Women's College
+            <span>LEARN • LEAD • INSPIRE</span>
+        </div>
+    </a>
+
+    <nav>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="#admissions" class="apply-btn">Apply Now</a>
+
+    <button class="menu" id="menu">☰</button>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container hero-content">
+
+    <div>
+        <div class="badge">🎓 Empowering Women Through Education</div>
+
+        <h1>
+            Build Your
+            <span class="gradient">Future</span>
+            With Confidence
+        </h1>
+
+        <p>
+            Welcome to Malineni Women's College — a supportive environment
+            where students learn, discover their talents, develop skills and
+            prepare for successful careers.
+        </p>
+
+        <div class="buttons">
+            <a href="#programs" class="btn primary">Explore Programs</a>
+            <a href="#contact" class="btn secondary">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div>
+            <h2>Learn. Grow. Lead.</h2>
+
+            <p>
+                Create your future with quality education, practical learning,
+                technology and opportunities for personal development.
+            </p>
+
+            <div class="pills">
+                <span>📚 Smart Learning</span>
+                <span>💻 Digital Skills</span>
+                <span>🤝 Mentorship</span>
+                <span>🚀 Career Ready</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+<!-- HIGHLIGHTS -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+    <small>Why Choose Us</small>
+    <h2>Education Beyond Classrooms</h2>
+    <p>
+        We focus on academics, skills, creativity, leadership and overall
+        student development.
+    </p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+    <div class="icon">📚</div>
+    <h3>Academic Excellence</h3>
+    <p>
+        Supportive learning and academic guidance for students.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">💡</div>
+    <h3>Innovation</h3>
+    <p>
+        Encourage creativity, technology and problem-solving.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🌱</div>
+    <h3>Holistic Growth</h3>
+    <p>
+        Develop confidence, communication and leadership skills.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🚀</div>
+    <h3>Career Ready</h3>
+    <p>
+        Prepare students for higher education and professional careers.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container about">
+
+    <div class="about-image">
+        <div class="about-box">
+            <h3>Learn With Purpose.</h3>
+            <p>
+                Grow with confidence and lead with knowledge.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-text">
+
+        <small style="color:#7c3aed;font-weight:bold;">
+            ABOUT THE COLLEGE
+        </small>
+
+        <h2>
+            A Place Where Students Can Discover Their Potential
+        </h2>
+
+        <p>
+            Malineni Women's College provides a student-focused learning
+            environment that encourages academic growth, creativity,
+            confidence and career development.
+        </p>
+
+        <ul class="check">
+            <li>Supportive learning environment</li>
+            <li>Practical and skill-based education</li>
+            <li>Leadership and teamwork opportunities</li>
+            <li>Technology-enabled learning</li>
+        </ul>
+
+        <a href="#contact" class="btn primary">Know More</a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section id="programs">
+<div class="container">
+
+<div class="section-title">
+    <small>Academic Programs</small>
+    <h2>Explore Our Programs</h2>
+    <p>
+        Choose a learning pathway according to your interests and career goals.
+    </p>
+</div>
+
+<div class="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="science">Science</button>
+    <button class="filter" data-filter="commerce">Commerce</button>
+    <button class="filter" data-filter="computer">Computer</button>
+    <button class="filter" data-filter="management">Management</button>
+</div>
+
+<div class="programs">
+
+<div class="program" data-category="science">
+    <div class="program-icon">🔬</div>
+    <h3>Life & Physical Sciences</h3>
+    <p>
+        Develop scientific thinking, observation and analytical skills.
+    </p>
+</div>
+
+<div class="program" data-category="commerce">
+    <div class="program-icon">📊</div>
+    <h3>Commerce & Finance</h3>
+    <p>
+        Learn accounting, finance, economics and business fundamentals.
+    </p>
+</div>
+
+<div class="program" data-category="computer">
+    <div class="program-icon">💻</div>
+    <h3>Computer Applications</h3>
+    <p>
+        Learn programming, databases, web development and digital skills.
+    </p>
+</div>
+
+<div class="program" data-category="management">
+    <div class="program-icon">📈</div>
+    <h3>Business & Management</h3>
+    <p>
+        Develop communication, leadership and business management skills.
+    </p>
+</div>
+
+<div class="program" data-category="science">
+    <div class="program-icon">🧪</div>
+    <h3>Applied Sciences</h3>
+    <p>
+        Connect classroom concepts with practical applications.
+    </p>
+</div>
+
+<div class="program" data-category="computer">
+    <div class="program-icon">🤖</div>
+    <h3>AI & Data Foundations</h3>
+    <p>
+        Explore artificial intelligence, data and modern technologies.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FACILITIES -->
+
+<section id="facilities">
+<div class="container">
+
+<div class="section-title">
+    <small>Campus Facilities</small>
+    <h2>Everything You Need To Grow</h2>
+</div>
+
+<div class="facilities">
+
+<div class="card">
+    <div class="icon">📚</div>
+    <h3>Digital Library</h3>
+    <p>
+        Academic resources and comfortable spaces for independent study.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">💻</div>
+    <h3>Computer Labs</h3>
+    <p>
+        Technology-enabled labs for coding and digital learning.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🧪</div>
+    <h3>Science Labs</h3>
+    <p>
+        Practical learning environments for scientific experiments.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🏃‍♀️</div>
+    <h3>Sports & Wellness</h3>
+    <p>
+        Activities that support fitness, teamwork and healthy routines.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🎭</div>
+    <h3>Clubs & Events</h3>
+    <p>
+        Cultural programs, student clubs and competitions.
+    </p>
+</div>
+
+<div class="card">
+    <div class="icon">🧭</div>
+    <h3>Career Guidance</h3>
+    <p>
+        Career planning, skill development and professional guidance.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+<div class="container stats-grid">
+
+<div class="stat">
+    <h2 class="counter" data-target="25">0</h2>
+    <p>Learning Pathways</p>
+</div>
+
+<div class="stat">
+    <h2 class="counter" data-target="40">0</h2>
+    <p>Student Activities</p>
+</div>
+
+<div class="stat">
+    <h2 class="counter" data-target="100">0</h2>
+    <p>Student Focus</p>
+</div>
+
+<div class="stat">
+    <h2 class="counter" data-target="1">0</h2>
+    <p>Student Success Goal</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ADMISSIONS -->
+
+<section id="admissions">
+<div class="container">
+
+<div class="section-title">
+    <small>Admissions</small>
+    <h2>Start Your Journey</h2>
+    <p>
+        Follow the admission process and take the next step towards your future.
+    </p>
+</div>
+
+<div class="admission">
+
+<div class="admission-card">
+
+<h2>How To Apply</h2>
+
+<div class="steps">
+
+<div class="step">
+    <div class="step-number">1</div>
+    <div>
+        <b>Explore Programs</b>
+        <p>Choose a course based on your interests.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-number">2</div>
+    <div>
+        <b>Check Eligibility</b>
+        <p>Review the required qualifications.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-number">3</div>
+    <div>
+        <b>Submit Application</b>
+        <p>Complete the application form.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-number">4</div>
+    <div>
+        <b>Complete Admission</b>
+        <p>Follow the college admission instructions.</p>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="admission-card">
+
+<h2>Why Students Choose Us</h2>
+
+<ul class="check">
+    <li>Academic support</li>
+    <li>Practical learning</li>
+    <li>Leadership opportunities</li>
+    <li>Student clubs and events</li>
+    <li>Career guidance</li>
+</ul>
+
+<a href="#contact" class="btn primary">
+    Request Information
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+    <small>FAQ</small>
+    <h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+    <button class="question">
+        How can I get admission information?
+        <span>+</span>
+    </button>
+    <div class="answer">
+        <p>
+            Contact the college admission office or use the enquiry form below.
+        </p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <button class="question">
+        What programs are available?
+        <span>+</span>
+    </button>
+    <div class="answer">
+        <p>
+            The website provides example categories such as Science, Commerce,
+            Computer Applications and Management.
+        </p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <button class="question">
+        Is the website mobile friendly?
+        <span>+</span>
+    </button>
+    <div class="answer">
+        <p>
+            Yes. The website is responsive and works on mobile, tablet and desktop.
+        </p>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+<div class="container contact">
+
+<div class="contact-info">
+
+<h2>Let's Connect</h2>
+
+<p>
+Have questions about programs, admissions or campus life?
+Send us an enquiry.
+</p>
+
+<ul class="contact-details">
+
+<li>
+📍 <b>Campus</b><br>
+&nbsp;&nbsp;&nbsp;Malineni Women's College
+</li>
+
+<li>
+📞 <b>Phone</b><br>
+&nbsp;&nbsp;&nbsp;+91 XXXXX XXXXX
+</li>
+
+<li>
+✉️ <b>Email</b><br>
+&nbsp;&nbsp;&nbsp;info@malineni-college.edu
+</li>
+
+<li>
+🕘 <b>Office Hours</b><br>
+&nbsp;&nbsp;&nbsp;Monday - Saturday, 9 AM - 5 PM
+</li>
+
+</ul>
+
+</div>
+
+
+<form class="form" id="contactForm">
+
+<h2>Send an Enquiry</h2>
+
+<br>
+
+<div class="form-grid">
+
+<div class="field">
+<label>Name</label>
+<input type="text" placeholder="Enter your name" required>
+</div>
+
+<div class="field">
+<label>Phone</label>
+<input type="tel" placeholder="Enter phone number" required>
+</div>
+
+<div class="field">
+<label>Email</label>
+<input type="email" placeholder="Enter email" required>
+</div>
+
+<div class="field">
+<label>Program</label>
+<select>
+<option>Select Program</option>
+<option>Science</option>
+<option>Commerce</option>
+<option>Computer Applications</option>
+<option>Management</option>
+</select>
+</div>
+
+<div class="field full">
+<label>Message</label>
+<textarea placeholder="Write your message"></textarea>
+</div>
+
+<div class="field full">
+<button class="btn primary" type="submit">
+Submit Enquiry
+</button>
+</div>
+
+</div>
+
+</form>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h3>Malineni Women's College</h3>
+<p>
+Learn • Lead • Inspire
+</p>
+<p>
+A modern college website designed to showcase
+education, campus life and student opportunities.
+</p>
+</div>
+
+<div>
+<h4>Quick Links</h4>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#facilities">Facilities</a>
+</div>
+
+<div>
+<h4>Admissions</h4>
+<a href="#admissions">How to Apply</a>
+<a href="#contact">Contact</a>
+<a href="#contact">Enquiry</a>
+</div>
+
+<div>
+<h4>Connect</h4>
+<p>📞 +91 XXXXX XXXXX</p>
+<p>✉️ info@malineni-college.edu</p>
+<p>📍 College Campus</p>
+</div>
+
+</div>
+
+<div class="copyright">
+<span>
+© <span id="year"></span> Malineni Women's College
+</span>
+
+<span>
+All Rights Reserved
+</span>
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* MOBILE MENU */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", function(){
+
+    navLinks.classList.toggle("show");
+
+    if(navLinks.classList.contains("show")){
+        menu.textContent = "✕";
+    }else{
+        menu.textContent = "☰";
+    }
+
+});
+
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+        navLinks.classList.remove("show");
+        menu.textContent = "☰";
+    });
+
+});
+
+
+/* PROGRAM FILTER */
+
+const filters = document.querySelectorAll(".filter");
+const programs = document.querySelectorAll(".program");
+
+filters.forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        filters.forEach(function(btn){
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const category = button.dataset.filter;
+
+        programs.forEach(function(program){
+
+            if(category === "all" ||
+               program.dataset.category === category){
+
+                program.style.display = "block";
+
+            }else{
+
+                program.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* FAQ */
+
+const questions = document.querySelectorAll(".question");
+
+questions.forEach(function(question){
+
+    question.addEventListener("click", function(){
+
+        const item = question.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(function(other){
+            if(other !== item){
+                other.classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+/* ANIMATED COUNTERS */
+
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver(function(entries){
+
+    entries.forEach(function(entry){
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+            const target = Number(counter.dataset.target);
+
+            let count = 0;
+
+            const speed = target / 50;
+
+            const update = setInterval(function(){
+
+                count += speed;
+
+                if(count >= target){
+
+                    counter.textContent = target;
+                    clearInterval(update);
+
+                }else{
+
+                    counter.textContent = Math.floor(count);
+
+                }
+
+            },30);
+
+            observer.unobserve(counter);
+        }
+
+    });
+
+},{threshold:.5});
+
+counters.forEach(function(counter){
+    observer.observe(counter);
+});
+
+
+/* CONTACT FORM */
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    alert("Thank you! Your enquiry has been submitted.");
+
+    this.reset();
+
+});
+
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
